@@ -1,0 +1,29 @@
+{
+  "name": "proton-native-md5-generator",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/.bin/babel-node build/index.js",
+    "build": "node_modules/.bin/babel index.js -d bin/",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "proton-native": "latest"
+  },
+  "devDependencies": {
+    "@types/proton-native": "^1.1.2",
+    "@types/react": "^16.4.1",
+    "babel-cli": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "protonNodeVersion": "current",
+    "mac": {
+      "identity": null
+    }
+  }
+}
